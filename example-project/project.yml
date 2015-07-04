@@ -1,0 +1,98 @@
+---
+
+# Notes:
+# Sample project C code is not presently written to produce a release artifact.
+# As such, release build options are disabled.
+# This sample, therefore, only demonstrates running a collection of unit tests.
+
+:project:
+  :use_exceptions: FALSE
+  :use_test_preprocessor: TRUE
+  :use_auxiliary_dependencies: TRUE
+  :build_root: build
+  :release_build: TRUE
+  :test_file_prefix: test_
+
+:release_build:
+  :output: project.axf
+
+:environment:
+
+:extension:
+  :executable: .bin
+
+:paths:
+  :test:
+    - +:test/**
+    - -:test/support
+  :source:
+    - src/**
+  :include:
+    - lib/TivaWare
+  :support:
+    - test/support
+
+:defines:
+  # in order to add common defines:
+  #  1) remove the trailing [] from the :common: section
+  #  2) add entries to the :common: section (e.g. :test: has TEST defined)
+  :commmon: &common_defines []
+  :test:
+    - *common_defines
+    - TEST
+  :test_preprocess:
+    - *common_defines
+    - TEST
+
+:cmock:
+  :mock_prefix: mock_
+  :when_no_prototypes: :warn
+  :enforce_strict_ordering: TRUE
+  :plugins:
+    - :ignore
+    - :callback
+  :treat_as:
+    uint8:    HEX8
+    uint16:   HEX16
+    uint32:   UINT32
+    int8:     INT8
+    bool:     UINT8ce
+
+:tools:
+  :release_compiler:
+    :executable: arm-none-eabi-gcc
+    :arguments:
+      - ${1}
+      - -mthumb
+      - -mcpu=cortex-m4
+      - -mfpu=fpv4-sp-d16
+      - -mfloat-abi=softfp
+      - -ffunction-sections
+      - -fdata-sections
+      - -MD
+      - -std=c99
+      - -Wall
+      - -pedantic
+      - -DPART_TM4C123GH6PM
+      - -c
+      - -Os
+      - -DTARGET_IS_TM4C123_RB1
+      - -I"$": COLLECTION_PATHS_INCLUDE
+      - -Dgcc
+      - -o ${2}
+  :release_linker:
+    :executable: arm-none-eabi-ld
+    :arguments:
+      - -T project.ld
+      - --entry ResetISR
+      - --gc-sections
+      - -o ${2}
+      - ${1}
+
+:plugins:
+  :load_paths:
+    - "#{Ceedling.load_path}"
+  :enabled:
+    - stdout_pretty_tests_report
+    - module_generator
+...
