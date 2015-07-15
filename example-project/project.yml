@@ -88,6 +88,7 @@
       - --gc-sections
       - -o ${2}
       - ${1}
+      - lib/TivaWare/driverlib/gcc/libdriver.a
 
 :plugins:
   :load_paths:

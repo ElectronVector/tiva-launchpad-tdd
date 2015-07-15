@@ -23,7 +23,11 @@
 //*****************************************************************************
 
 #include <stdint.h>
+#include <stdbool.h>
 #include "inc/tm4c123gh6pm.h"
+#include "inc/hw_memmap.h"
+#include "driverlib/pin_map.h"
+#include "driverlib/gpio.h"
 
 //*****************************************************************************
 //
@@ -70,7 +74,8 @@ main(void)
         //
         // Turn on the LED.
         //
-        GPIO_PORTF_DATA_R |= 0x08;
+        //GPIO_PORTF_DATA_R |= 0x08;
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
 
         //
         // Delay for a bit.
