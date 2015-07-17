@@ -7,3 +7,9 @@ This is an example project and build environment for the Tiva C Series Launchpad
 Launch the environment with: `vagrant up`
 Connect to it with: `vagrant ssh`
 Load the app on the board with: `rake load`
+
+# Documentation
+
+[Ceedling Manual](https://github.com/ThrowTheSwitch/Ceedling/blob/master/docs/CeedlingPacket.md)
+[CMock Manual](https://github.com/ThrowTheSwitch/CMock/blob/master/docs/CMock_Summary.md)
+[Unity Manual](https://github.com/ThrowTheSwitch/Unity/raw/master/docs/Unity%20Summary.pdf)

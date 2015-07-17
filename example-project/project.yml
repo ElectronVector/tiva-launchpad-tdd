@@ -29,6 +29,7 @@
     - src/**
   :include:
     - lib/TivaWare
+    - lib/TivaWare/driverlib
   :support:
     - test/support
 
@@ -48,6 +49,10 @@
   :mock_prefix: mock_
   :when_no_prototypes: :warn
   :enforce_strict_ordering: TRUE
+  :treat_externs: :include
+  :includes_h_pre_orig_header:
+    - <stdbool.h>
+    - <stdint.h>
   :plugins:
     - :ignore
     - :callback
@@ -56,7 +61,7 @@
     uint16:   HEX16
     uint32:   UINT32
     int8:     INT8
-    bool:     UINT8ce
+    bool:     UINT8
 
 :tools:
   :release_compiler:
