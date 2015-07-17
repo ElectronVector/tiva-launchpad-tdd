@@ -27,6 +27,7 @@
 #include "inc/tm4c123gh6pm.h"
 #include "inc/hw_memmap.h"
 #include "driverlib/pin_map.h"
+#include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
 
 //*****************************************************************************
@@ -52,19 +53,14 @@ main(void)
     //
     // Enable the GPIO port that is used for the on-board LED.
     //
-    SYSCTL_RCGC2_R = SYSCTL_RCGC2_GPIOF;
-
-    //
-    // Do a dummy read to insert a few cycles after enabling the peripheral.
-    //
-    ui32Loop = SYSCTL_RCGC2_R;
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
 
     //
     // Enable the GPIO pin for the LED (PF3).  Set the direction as output, and
     // enable the GPIO pin for digital function.
     //
-    GPIO_PORTF_DIR_R = 0x08;
-    GPIO_PORTF_DEN_R = 0x08;
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_3);
+
 
     //
     // Loop forever.
@@ -74,7 +70,6 @@ main(void)
         //
         // Turn on the LED.
         //
-        //GPIO_PORTF_DATA_R |= 0x08;
         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
 
         //
@@ -87,7 +82,7 @@ main(void)
         //
         // Turn off the LED.
         //
-        GPIO_PORTF_DATA_R &= ~(0x08);
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
 
         //
         // Delay for a bit.
