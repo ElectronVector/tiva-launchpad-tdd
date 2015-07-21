@@ -4,7 +4,7 @@
 
 This is an example project and build environment for the Tiva C Series Launchpad (TM4C123G). It demonstrates how to use the Ceedling unit test framework to facilitate test-driven design.
 
-![Tiva Launchpad](launchpad-tivac.jpg?raw=true)
+<img src="launchpad-tivac.jpg" width="120">
 
 Launch the environment with: `vagrant up`
 
