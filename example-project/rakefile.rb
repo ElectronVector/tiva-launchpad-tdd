@@ -7,7 +7,7 @@ driverlib = "lib/TivaWare/driverlib/gcc/libdriver.a"
 # Run all tests and build the release by default.
 task :default => %w[ test:all release ]
 
-# The release build requires driverlib to be build first.
+# The release build requires driverlib to be built first.
 task :release => "#{driverlib}"
 
 file "#{PROJECT_BUILD_ROOT}/release/project.bin" => :release do |task|
