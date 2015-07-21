@@ -1,21 +1,27 @@
-# Example Ceedling project for the Tiva Launchpad
+# Test Driven Development Environment for the Tiva C Series Launchpad
 
 *With Vagrant build environment!*
 
 This is an example project and build environment for the Tiva C Series Launchpad (EK-TM4C123GXL). It demonstrates how to use the Ceedling unit test framework to facilitate test-driven design.
 
-The [Tiva C Series Launchpad (EK-TM4C123GXL)](http://www.ti.com/ww/en/launchpad/launchpads-connected-ek-tm4c123gxl.html) is a low-cost evaluation board from TI. You can get it for [about $13](https://store.ti.com/Tiva-C-LaunchPad.aspx). It's built for their line of Tiva C Series microcontrollers, which are powerful ARM Cortex-M4F-based microcontrollers.
+## Tiva Launchpad
 
-Tiva C Series Launchpad (EK-TM4C123GXL)
+The [Tiva C Series Launchpad (EK-TM4C123GXL)](http://www.ti.com/ww/en/launchpad/launchpads-connected-ek-tm4c123gxl.html) is a low-cost evaluation board from TI for thier powerful line of ARM Cortex-M4F-based microcontrollers. You can get it for [about $13](https://store.ti.com/Tiva-C-LaunchPad.aspx).
+
+Tiva C Series Launchpad (EK-TM4C123GXL):
 <img src="launchpad-tivac.jpg" width="400">
+
+## Starting the Enviroment
 
 Launch the environment with: `vagrant up`
 
 Connect to it with: `vagrant ssh`
 
+## Using the Environment
+
 Load the app on the board with: `rake load`
 
-# Documentation
+## Documentation
 
 [Ceedling Manual](https://github.com/ThrowTheSwitch/Ceedling/blob/master/docs/CeedlingPacket.md)
 
