@@ -24,14 +24,14 @@
 :paths:
   :test:
     - +:test/**
-    - -:test/support
+#    - -:test/support
   :source:
     - src/**
   :include:
     - lib/TivaWare
     - lib/TivaWare/driverlib
-  :support:
-    - test/support
+#  :support:
+#    - test/support
 
 :defines:
   # in order to add common defines:
