@@ -17,7 +17,13 @@ Connect to it with: `vagrant ssh`
 
 ## Example Project
 
-Load the app on the board with: `rake load`
+The example project is in the **example-project** folder. Switch to this folder to run the example project commands.
+
+Execute all unit tests with `rake test:all`.
+
+Load the app on the board with: `rake load`.
+
+The load command also builds the application if necessary. Just build the application with: `rake release`.
 
 ## Documentation
 
