@@ -11,15 +11,19 @@ Tiva C Series Launchpad (EK-TM4C123GXL):
 
 ## Starting the Enviroment
 
-Launch the environment with: `vagrant up`
+Launch the environment with: `vagrant up`.
 
-Connect to it with: `vagrant ssh`
+Connect to it with: `vagrant ssh`.
+
+Exit the environment with `exit`.
 
 ## Example Project
 
 The example project is in the **example-project** folder. Switch to this folder to run the example project commands.
 
 Execute all unit tests with `rake test:all`.
+
+Run a single test with `rake test:<module>`, e.g. `rake test:led`.
 
 Load the app on the board with: `rake load`.
 
