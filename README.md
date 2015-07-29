@@ -1,6 +1,6 @@
 # A Test-Driven Development Environment for the Tiva C Series Launchpad
 
-This is an example project and build environment for the Tiva C Series Launchpad (EK-TM4C123GXL). It demonstrates how to use the Ceedling unit test framework to facilitate test-driven design. Vagrant is used to create the
+This is an example project and build environment for the Tiva C Series Launchpad (EK-TM4C123GXL). It demonstrates how to use the Ceedling unit test framework to facilitate test-driven design.
 
 ## Tiva Launchpad
 
