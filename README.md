@@ -7,6 +7,7 @@ This is an example project and build environment for the Tiva C Series Launchpad
 The [Tiva C Series Launchpad (EK-TM4C123GXL)](http://www.ti.com/ww/en/launchpad/launchpads-connected-ek-tm4c123gxl.html) is a low-cost evaluation board from TI for their powerful line of ARM Cortex-M4F-based microcontrollers. You can get it for [about $13](https://store.ti.com/Tiva-C-LaunchPad.aspx).
 
 Tiva C Series Launchpad (EK-TM4C123GXL):
+
 <img src="launchpad-tivac.jpg" width="400">
 
 ## Requirements
