@@ -12,7 +12,7 @@ Tiva C Series Launchpad (EK-TM4C123GXL):
 
 ## Requirements
 
-This build environment requires that [Vagrant](http://www.vagrantup.com/downloads) and [Virtualbox](https://www.virtualbox.org/wiki/Downloads) are installed. Virtualbox 5.0 adds support for USB 3.0. **I've tested this setup working on USB 3.0 ports with Virtualbox 5.0.4!** I had previously been unable to get it working with 5.0.0.
+This build environment requires that [Vagrant](http://www.vagrantup.com/downloads) and [Virtualbox](https://www.virtualbox.org/wiki/Downloads) are installed. Virtualbox 5.0 adds support for USB 3.0. **I've tested this setup working on USB 3.0 ports with Virtualbox 5.0.4!** I had previously been unable to get it working with version 5.0.0.
 
 ## Starting the Environment
 
