@@ -6,6 +6,8 @@
 VERSION_CEEDLING=0.18.0
 #VERSION_GNU_ARM=4.9.3.2015q1-0trusty13
 
+apt-get update
+
 # Rake is a dependency for projects built with Ceedling.
 # apt-get -y install rake
 gem install ceedling --version $VERSION_CEEDLING
@@ -16,20 +18,20 @@ gem install ceedling --version $VERSION_CEEDLING
 # apt-get -y install pandoc
 
 # Developer tools.
-apt-get -y install git
+apt-get -y --force-yes install git
 # apt-get -y install subversion
 
 # Install the pre-built GNU ARM tools (including the compiler).
-apt-get -y remove binutils-arm-none-eabi gcc-arm-none-eabi
-apt-add-repository -y ppa:terry.guo/gcc-arm-embedded
+apt-get -y --force-yes remove binutils-arm-none-eabi gcc-arm-none-eabi
+apt-add-repository -y --force-yes ppa:terry.guo/gcc-arm-embedded
 apt-get update
-apt-get -y install gcc-arm-none-eabi
+apt-get -y --force-yes install gcc-arm-none-eabi
 
 # Install TivaWare and build.
 
 # Install lm4flash.
-apt-get -y install libusb-1.0.0
-apt-get -y install pkg-config
+apt-get -y --force-yes install libusb-1.0.0
+apt-get -y --force-yes install pkg-config
 git clone git://github.com/utzig/lm4tools.git /usr/local/lm4tools
 pushd /usr/local/lm4tools/lm4flash
 make
