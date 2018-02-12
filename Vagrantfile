@@ -6,8 +6,8 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  # Use Ubuntu 14.04 64-bit.
-  config.vm.box = "ubuntu/trusty64"
+  # Use Ubuntu 16.04 64-bit.
+  config.vm.box = "ubuntu/artful64"
 
   # Run the provisioning script.
   config.vm.provision :shell, path: "provision.sh"
