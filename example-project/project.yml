@@ -50,7 +50,7 @@
   :when_no_prototypes: :warn
   :enforce_strict_ordering: TRUE
   :treat_externs: :include
-  :includes_h_pre_orig_header:
+  :includes:
     - <stdbool.h>
     - <stdint.h>
   :plugins:
