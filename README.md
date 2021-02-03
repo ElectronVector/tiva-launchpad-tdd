@@ -26,13 +26,13 @@ Exit the environment with `exit`.
 
 The example project is in the **example-project** folder. Switch to this folder to run the example project commands.
 
-Execute all unit tests with `rake test:all`.
+Execute all unit tests with `ceedling test:all`.
 
-Run a single test with `rake test:<module>`, e.g. `rake test:led`.
+Run a single test with `ceedling test:<module>`, e.g. `ceedling test:led`.
 
-Load the app on the board with: `rake load`.
+Load the app on the board with: `ceedling load`.
 
-The load command also builds the application if necessary. Just build the application with: `rake release`.
+The load command also builds the application if necessary. Just build the application with: `ceedling release`.
 
 ## Example Project Description
 
